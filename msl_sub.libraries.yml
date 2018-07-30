@@ -1,0 +1,13 @@
+global-styling:
+  css:
+    theme:
+      css/main.css: {}
+  js:
+    js/main.js: {}
+    https://use.fontawesome.com/releases/v5.0.6/js/all.js: { type: external }
+
+global-fonts:
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Merriweather: { type: external }
+      https://fonts.googleapis.com/css?family=Open+Sans:300,400: { type: external }

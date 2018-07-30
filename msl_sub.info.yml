@@ -1,0 +1,25 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Market Street Loft Sub'
+description: 'The Market Street Loft theme which inherits Bootstrap'
+package: 'Bootstrap'
+
+regions:
+  alerts: 'Alerts'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Header Content'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'msl_sub/global-styling'
+  - 'msl_sub/global-fonts'
