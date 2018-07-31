@@ -1,1 +1,50 @@
-// Place theme SCSS here.
+// Colors
+$color-main: #043565;
+$color-secondary: #F6AE2D;
+$color-accent-1: #D56062;
+$color-accent-2: #605F5E;
+$color-font: #23231A;
+
+// Fonts
+$font-main: 'Merriweather', serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+// Headings
+h1 {
+  font-family: $font-main;
+  font-size: 42px;
+}
+
+h2 {
+  font-family: $font-secondary;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: $font-secondary;
+  font-size: 28px;
+}
+
+// Body content
+body {
+  font-family: $font-secondary;
+  font-size: 18px;
+  color: $color-font;
+  margin-right: 75px;
+
+  p {
+    line-height: 28px;
+  }
+}
+
+// Navigation
+aside.navigation {
+  background: $color-main;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 100vh;
+  // padding: 30px 35px;
+}
