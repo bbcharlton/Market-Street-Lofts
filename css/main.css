@@ -18,6 +18,14 @@ body {
   margin-right: 60px; }
   body p {
     line-height: 28px; }
+  body #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); }
 
 aside.navigation {
   background: #043565;
@@ -26,12 +34,23 @@ aside.navigation {
   right: 0;
   width: 60px;
   height: 100vh;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transition: width 300ms ease-in;
+  -webkit-transition: width 150ms ease-out;
+  -moz-transition: width 300ms ease-in;
+  -moz-transition: width 150ms ease-out;
+  -ms-transition: width 300ms ease-in;
+  -ms-transition: width 150ms ease-out;
+  -o-transition: width 300ms ease-in;
+  -o-transition: width 150ms ease-out;
+  transition: width 300ms ease-in;
+  transition: width 150mx ease-out; }
   aside.navigation li {
     display: inline-block;
     width: 100%; }
     aside.navigation li a {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      white-space: nowrap; }
       aside.navigation li a.active {
         color: #F6AE2D; }
       aside.navigation li a:hover {
@@ -43,9 +62,13 @@ aside.navigation {
       aside.navigation li a:focus {
         color: #F6AE2D;
         background: transparent; }
-    aside.navigation li .menu-title {
+    aside.navigation li .main-menu-title {
       display: none;
-      padding-left: 14px; }
+      padding-left: 14px;
+      vertical-align: top;
+      margin: 6px 0; }
+  aside.navigation .navbar-nav {
+    margin: 0; }
   aside.navigation .main-menu-toggle {
     color: white;
     border: none;

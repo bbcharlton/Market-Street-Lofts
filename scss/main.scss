@@ -36,6 +36,17 @@ body {
   p {
     line-height: 28px;
   }
+
+  // Body overlay when main navigation is toggled
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0,0,0,.50);
+  }
 }
 
 // Navigation
@@ -44,11 +55,19 @@ aside.navigation {
   position: fixed;
   top: 0;
   right: 0;
-  // width: 75px;
   width: 60px;
   height: 100vh;
   z-index: 2;
-  // padding: 30px 35px;
+  -webkit-transition: width 300ms ease-in;
+  -webkit-transition: width 150ms ease-out;
+  -moz-transition: width 300ms ease-in;
+  -moz-transition: width 150ms ease-out;
+  -ms-transition: width 300ms ease-in;
+  -ms-transition: width 150ms ease-out;
+  -o-transition: width 300ms ease-in;
+  -o-transition: width 150ms ease-out;
+    transition: width 300ms ease-in;
+    transition: width 150mx ease-out;
 
   li {
     display: inline-block;
@@ -56,6 +75,7 @@ aside.navigation {
 
     a {
       color: #FFFFFF;
+      white-space: nowrap;
 
       &.active {
         color: $color-secondary;
@@ -77,12 +97,20 @@ aside.navigation {
       }
     }
 
-    .menu-title {
+    // Main menu list item titles
+    .main-menu-title {
       display: none;
       padding-left: 14px;
+      vertical-align: top;
+      margin: 6px 0;
     }
   }
 
+  .navbar-nav {
+    margin: 0;
+  }
+
+  // Main menu toggle button
   .main-menu-toggle {
     color: white;
     border: none;
@@ -95,6 +123,7 @@ aside.navigation {
     margin-top: 15px;
   }
 
+  // Main menu list item icons
   .svg-inline--fa {
     display: inline-block;
     font-size: 30px;
