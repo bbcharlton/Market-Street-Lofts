@@ -31,7 +31,7 @@ body {
   font-family: $font-secondary;
   font-size: 18px;
   color: $color-font;
-  margin-right: 75px;
+  margin-right: 60px;
 
   p {
     line-height: 28px;
@@ -44,7 +44,61 @@ aside.navigation {
   position: fixed;
   top: 0;
   right: 0;
-  width: 75px;
+  // width: 75px;
+  width: 60px;
   height: 100vh;
+  z-index: 2;
   // padding: 30px 35px;
+
+  li {
+    display: inline-block;
+    width: 100%;
+
+    a {
+      color: #FFFFFF;
+
+      &.active {
+        color: $color-secondary;
+      }
+
+      &:hover {
+        color: $color-secondary;
+        background: transparent;
+      }
+
+      &:active {
+        color: $color-secondary;
+        background: transparent;
+      }
+
+      &:focus {
+        color: $color-secondary;
+        background: transparent;
+      }
+    }
+
+    .menu-title {
+      display: none;
+      padding-left: 14px;
+    }
+  }
+
+  .main-menu-toggle {
+    color: white;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  .svg-inline--fa {
+    display: inline-block;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
 }

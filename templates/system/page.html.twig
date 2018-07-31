@@ -56,11 +56,9 @@
 {% if page.navigation %}
   {% block navbar %}
     <aside class="navigation" id="navbar">
-      <button type="button" class="navbar-toggle">
+      <button type="button" class="main-menu-toggle" tabindex="2">
           <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <i class="fas fa-bars"></i>
         </button>
       {{ page.navigation }}
     </aside>
