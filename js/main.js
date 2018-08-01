@@ -24,7 +24,9 @@ window.onload = function() {
 
       body_overlay.style.display = 'block';
       main_menu_toggle.classList.remove('closed');
+      main_menu_toggle.lastElementChild.classList.remove('fa-bars');
       main_menu_toggle.classList.add('opened');
+      main_menu_toggle.lastElementChild.classList.add('fa-times');
     } else if (main_menu_toggle.classList.contains('opened')) {
       document.getElementById('navbar').style.width = '60px';
 
@@ -34,7 +36,9 @@ window.onload = function() {
 
       body_overlay.style.display = 'none';
       main_menu_toggle.classList.remove('opened');
+      main_menu_toggle.lastElementChild.classList.remove('fa-times');
       main_menu_toggle.classList.add('closed');
+      main_menu_toggle.lastElementChild.classList.add('fa-bars');
     }
   });
 
@@ -49,6 +53,8 @@ window.onload = function() {
 
     body_overlay.style.display = 'none';
     main_menu_toggle.classList.remove('opened');
+    main_menu_toggle.lastElementChild.classList.remove('fa-times');
     main_menu_toggle.classList.add('closed');
+    main_menu_toggle.lastElementChild.classList.add('fa-bars');
   });
 };

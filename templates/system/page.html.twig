@@ -61,6 +61,11 @@
           <i class="fas fa-bars"></i>
         </button>
       {{ page.navigation }}
+      {% if logged_in %}
+        <a href="/user/logout" class="main-menu-item log-out" id="userLog"><i class="fas fa-sign-out-alt"></i> <div class="main-menu-title">Logout</div></a>
+      {% elseif not logged_in %}
+        <a href="/user/login" class="main-menu-item log-in" id="userLog"><i class="fas fa-sign-in-alt"></i> <div class="main-menu-title">Login</div></a>
+      {% endif %}
     </aside>
   {% endblock %}
 {% endif %}
