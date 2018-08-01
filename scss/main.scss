@@ -38,6 +38,11 @@ body {
     line-height: 28px;
   }
 
+  // Front page body has uneeded margin
+  &.path-frontpage {
+    margin-top: 0px;
+  }
+
   // Body overlay when main navigation is toggled
   #overlay {
     display: none;
@@ -170,6 +175,37 @@ aside.navigation {
 
     &:focus {
       color: $color-accent-1;
+    }
+  }
+}
+
+// Page header
+header {
+  .page-header {
+    border: none;
+  }
+
+  .header-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.50);
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
