@@ -130,4 +130,12 @@ header .header-banner {
     width: 100%;
     height: auto; }
 
+footer {
+  text-align: center;
+  background: #23231A; }
+  footer.footer {
+    width: 100%; }
+  footer h4 {
+    color: #FFFFFF; }
+
 /*# sourceMappingURL=main.css.map */
