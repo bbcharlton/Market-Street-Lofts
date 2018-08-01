@@ -209,3 +209,16 @@ header {
     }
   }
 }
+
+footer {
+  text-align: center;
+  background: $color-font;
+
+  &.footer {
+    width: 100%;
+  }
+
+  h4 {
+    color: #FFFFFF;
+  }
+}
