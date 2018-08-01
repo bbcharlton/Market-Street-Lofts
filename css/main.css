@@ -18,6 +18,8 @@ body {
   margin-right: 60px; }
   body p {
     line-height: 28px; }
+  body.path-frontpage {
+    margin-top: 0px; }
   body #overlay {
     display: none;
     position: fixed;
@@ -106,5 +108,26 @@ aside.navigation {
       color: #D56062; }
     aside.navigation .log-out:focus {
       color: #D56062; }
+
+header .page-header {
+  border: none; }
+header .header-banner {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; }
+  header .header-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); }
+  header .header-banner img {
+    width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=main.css.map */
