@@ -14,24 +14,26 @@ $font-secondary: 'Open Sans', sans-serif;
 h1 {
   font-family: $font-main;
   font-size: 42px;
+  color: $color-font;
 }
 
 h2 {
   font-family: $font-secondary;
   font-size: 36px;
   font-weight: 300;
+  color: $color-font;
 }
 
 h3 {
   font-family: $font-secondary;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 // Body content
 body {
-  font-family: $font-secondary;
-  font-size: 18px;
-  color: $color-font;
+  font-family: $font-main;
+  font-size: 14px;
+  color: $color-accent-2;
   margin-right: 60px;
 
   p {
@@ -53,6 +55,56 @@ body {
     z-index: 2;
     background: rgba(0,0,0,.50);
   }
+
+  // Full width yellow strips of text
+  .text-strip {
+    color: #FFFFFF;
+    padding: 47px 15px;
+    margin-bottom: 50px;
+    background: linear-gradient(rgba(246,174,45,.90),rgba(246,174,45,.90)),url('/themes/msl_sub/images/rawpixel-633856-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-bottom {
+      color: #FFFFFF;
+      padding: 47px 15px;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .front-page-panel-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .front-page-panel {
+    display: flex;
+    width: 100%;
+    color: #FFFFFF;
+
+    h3 {
+      flex: 1;
+      font-family: $font-main;
+      padding: 75px 30px;
+      line-height: 32px;
+    }
+
+    // First front page panel
+    &:nth-child(1) h3 {
+      background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/themes/msl_sub/images/israel-sundseth-1683-unsplash.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    // Second front page panel
+    &:nth-child(2) h3 {
+      background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/themes/msl_sub/images/jay-wennington-2065-unsplash.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 // Navigation
@@ -72,8 +124,8 @@ aside.navigation {
   -ms-transition: width 150ms ease-out;
   -o-transition: width 300ms ease-in;
   -o-transition: width 150ms ease-out;
-    transition: width 300ms ease-in;
-    transition: width 150mx ease-out;
+  transition: width 300ms ease-in;
+  transition: width 150mx ease-out;
 
   li {
     display: inline-block;
@@ -106,6 +158,7 @@ aside.navigation {
     }
   }
 
+  // Login/Logout menu item
   #userLog {
     display: inline-block;
     width: 100%;
@@ -154,6 +207,7 @@ aside.navigation {
     height: 30px;
   }
 
+  // Login style
   .log-in {
     color: $color-accent-3;
 
@@ -166,6 +220,7 @@ aside.navigation {
     }
   }
 
+  // Logout style
   .log-out {
     color: $color-accent-1;
 
@@ -185,6 +240,7 @@ header {
     border: none;
   }
 
+  // Front page hero image
   .header-banner {
     width: 100vw;
     position: relative;
@@ -210,15 +266,52 @@ header {
   }
 }
 
+// Page footer
 footer {
   text-align: center;
   background: $color-font;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('/themes/msl_sub/images/max-vertsanov-683738-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &.footer {
     width: 100%;
+    margin-top: 0px;
+    border: none;
   }
 
   h4 {
     color: #FFFFFF;
+  }
+}
+
+// Media queries
+@media (max-width: 1060px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .front-page-panel-wrapper {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .front-page-panel-wrapper {
+    display: block;
+  }
+
+  .front-page-panel {
+    display: block;
+    color: #FFFFFF;
+
+    h3 {
+      flex: 0;
+      padding: 30px;
+      background: $color-accent-2;
+    }
   }
 }

@@ -1,20 +1,22 @@
 h1 {
   font-family: "Merriweather", serif;
-  font-size: 42px; }
+  font-size: 42px;
+  color: #23231A; }
 
 h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 36px;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #23231A; }
 
 h3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 28px; }
+  font-size: 24px; }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  color: #23231A;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  color: #605F5E;
   margin-right: 60px; }
   body p {
     line-height: 28px; }
@@ -28,6 +30,39 @@ body {
     width: 100%;
     z-index: 2;
     background: rgba(0, 0, 0, 0.5); }
+  body .text-strip {
+    color: #FFFFFF;
+    padding: 47px 15px;
+    margin-bottom: 50px;
+    background: linear-gradient(rgba(246, 174, 45, 0.9), rgba(246, 174, 45, 0.9)), url("/themes/msl_sub/images/rawpixel-633856-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    body .text-strip-bottom {
+      color: #FFFFFF;
+      padding: 47px 15px;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 0px; }
+  body .front-page-panel-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  body .front-page-panel {
+    display: flex;
+    width: 100%;
+    color: #FFFFFF; }
+    body .front-page-panel h3 {
+      flex: 1;
+      font-family: "Merriweather", serif;
+      padding: 75px 30px;
+      line-height: 32px; }
+    body .front-page-panel:nth-child(1) h3 {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/themes/msl_sub/images/israel-sundseth-1683-unsplash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat; }
+    body .front-page-panel:nth-child(2) h3 {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/themes/msl_sub/images/jay-wennington-2065-unsplash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat; }
 
 aside.navigation {
   background: #043565;
@@ -132,10 +167,34 @@ header .header-banner {
 
 footer {
   text-align: center;
-  background: #23231A; }
+  background: #23231A;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url("/themes/msl_sub/images/max-vertsanov-683738-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
   footer.footer {
-    width: 100%; }
+    width: 100%;
+    margin-top: 0px;
+    border: none; }
   footer h4 {
     color: #FFFFFF; }
+
+@media (max-width: 1060px) {
+  .container {
+    width: 100%;
+    margin: 0; } }
+@media (min-width: 768px) {
+  .front-page-panel-wrapper {
+    display: flex; } }
+@media (max-width: 768px) {
+  .front-page-panel-wrapper {
+    display: block; }
+
+  .front-page-panel {
+    display: block;
+    color: #FFFFFF; }
+    .front-page-panel h3 {
+      flex: 0;
+      padding: 30px;
+      background: #605F5E; } }
 
 /*# sourceMappingURL=main.css.map */

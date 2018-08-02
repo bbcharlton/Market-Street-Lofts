@@ -70,20 +70,24 @@
   {% endblock %}
 {% endif %}
 
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    <header class="container" role="heading">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Market Street Lofts</h1>
+          {{ page.header }}
+        </div>
+      </div>
+    </header>
+  {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
   <main role="main" class="main-container container js-quickedit-main-content">
     <div class="row">
-
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <header class="col-sm-12" role="heading">
-            <h1>Market Street Lofts</h1>
-            {{ page.header }}
-          </header>
-        {% endblock %}
-      {% endif %}
 
       {# Content #}
       <section class="col-sm-12">
