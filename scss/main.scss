@@ -49,6 +49,10 @@ body {
     padding-top: 79px;
   }
 
+  &.toolbar-vertical aside.navigation {
+    padding-top: 39px;
+  }
+
   p {
     line-height: 28px;
   }
@@ -298,8 +302,9 @@ footer {
   }
 }
 
-// Announcements
-article.announcement {
+// Announcements & Events
+article.announcement,
+article.event {
   position: relative;
   padding: 30px 30px 50px 30px;
   margin-top: 30px;
@@ -316,7 +321,8 @@ article.announcement {
   }
 }
 
-.view-announcements .announcement {
+.view-announcements .card,
+.view-events .card {
   position: relative;
   padding: 30px;
   margin-top: 30px;
@@ -367,12 +373,31 @@ article.announcement {
     margin-bottom: 0px;
   }
 
-  a.announcement-anchor {
+  a.card-anchor {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+  &.event {
+    margin-bottom: 0px;
+  }
+}
+
+// Event cards
+.view-events .views-row {
+  &:nth-child(odd) {
+    width: calc(50% - 15px);
+    float: left;
+    margin-right: 15px;
+  }
+
+  &:nth-child(even) {
+    width: calc(50% - 15px);
+    float: left;
+    margin-left: 15px;
   }
 }
 
@@ -419,6 +444,7 @@ button[type="submit"] {
 
   &::after {
     color: $color-accent-2;
+    z-index: 1;
   }
 }
 
@@ -451,6 +477,22 @@ ul.pagination {
   }
 }
 
+@media (max-width: 976px) {
+  .view-events .views-row {
+    &:nth-child(odd) {
+      width: 100%;
+      float: none;
+      margin: 0px;
+    }
+  
+    &:nth-child(even) {
+      width: 100%;
+      float: none;
+      margin: 0px;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .front-page-panel-wrapper {
     display: flex;
@@ -475,5 +517,11 @@ ul.pagination {
 
   label[for="edit-sort-by"] {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 609px) {
+  #toolbar-bar {
+    margin-right: -60px;
   }
 }

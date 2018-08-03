@@ -25,6 +25,8 @@ body {
     padding-top: 39px; }
   body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open aside.navigation {
     padding-top: 79px; }
+  body.toolbar-vertical aside.navigation {
+    padding-top: 39px; }
   body p {
     line-height: 28px; }
   body #overlay {
@@ -185,58 +187,83 @@ footer {
   footer h4 {
     color: #FFFFFF; }
 
-article.announcement {
+article.announcement,
+article.event {
   position: relative;
   padding: 30px 30px 50px 30px;
   margin-top: 30px;
   margin-bottom: 30px;
   background: #FFFFFF;
   box-shadow: 0px 1px 4px 0px #605F5E; }
-  article.announcement .field--type-timestamp {
+  article.announcement .field--type-timestamp,
+  article.event .field--type-timestamp {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     position: absolute;
     right: 30px;
     bottom: 15px; }
 
-.view-announcements .announcement {
+.view-announcements .card,
+.view-events .card {
   position: relative;
   padding: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
   background: #FFFFFF;
   box-shadow: 0px 1px 4px 0px #605F5E; }
-  .view-announcements .announcement:hover {
+  .view-announcements .card:hover,
+  .view-events .card:hover {
     box-shadow: 0px 1px 20px 0px #605F5E; }
-    .view-announcements .announcement:hover h1 {
+    .view-announcements .card:hover h1,
+    .view-events .card:hover h1 {
       color: #F6AE2D; }
-  .view-announcements .announcement:focus-within h1 {
+  .view-announcements .card:focus-within h1,
+  .view-events .card:focus-within h1 {
     color: #F6AE2D; }
-  .view-announcements .announcement h1 {
+  .view-announcements .card h1,
+  .view-events .card h1 {
     margin: 0;
     color: #043565; }
-    .view-announcements .announcement h1 a {
+    .view-announcements .card h1 a,
+    .view-events .card h1 a {
       color: #043565; }
-      .view-announcements .announcement h1 a:hover {
+      .view-announcements .card h1 a:hover,
+      .view-events .card h1 a:hover {
         text-decoration: none;
         color: #F6AE2D; }
-      .view-announcements .announcement h1 a:focus {
+      .view-announcements .card h1 a:focus,
+      .view-events .card h1 a:focus {
         text-decoration: none;
         color: #F6AE2D; }
-  .view-announcements .announcement span {
+  .view-announcements .card span,
+  .view-events .card span {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 14px;
     margin-bottom: 20px; }
-  .view-announcements .announcement p {
+  .view-announcements .card p,
+  .view-events .card p {
     margin-top: 18px;
     margin-bottom: 0px; }
-  .view-announcements .announcement a.announcement-anchor {
+  .view-announcements .card a.card-anchor,
+  .view-events .card a.card-anchor {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
+  .view-announcements .card.event,
+  .view-events .card.event {
+    margin-bottom: 0px; }
+
+.view-events .views-row:nth-child(odd) {
+  width: calc(50% - 15px);
+  float: left;
+  margin-right: 15px; }
+.view-events .views-row:nth-child(even) {
+  width: calc(50% - 15px);
+  float: left;
+  margin-left: 15px; }
 
 input.form-control,
 select.form-control {
@@ -270,7 +297,8 @@ button[type="submit"] {
 .select-wrapper {
   margin-right: 30px; }
   .select-wrapper::after {
-    color: #605F5E; }
+    color: #605F5E;
+    z-index: 1; }
 
 ul.pagination {
   font-family: "Open Sans", sans-serif; }
@@ -289,6 +317,15 @@ ul.pagination {
   .container {
     width: 100%;
     margin: 0; } }
+@media (max-width: 976px) {
+  .view-events .views-row:nth-child(odd) {
+    width: 100%;
+    float: none;
+    margin: 0px; }
+  .view-events .views-row:nth-child(even) {
+    width: 100%;
+    float: none;
+    margin: 0px; } }
 @media (min-width: 768px) {
   .front-page-panel-wrapper {
     display: flex; } }
@@ -306,5 +343,8 @@ ul.pagination {
 
   label[for="edit-sort-by"] {
     margin-left: 0px; } }
+@media (max-width: 609px) {
+  #toolbar-bar {
+    margin-right: -60px; } }
 
 /*# sourceMappingURL=main.css.map */
