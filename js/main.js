@@ -2,6 +2,7 @@ window.onload = function() {
   var main_menu_toggle = document.getElementById('main-menu-toggle');
   var main_menu_items = document.getElementsByClassName('main-menu-item');
   var main_menu_titles = document.getElementsByClassName('main-menu-title');
+  var info_btns = document.getElementsByClassName('btn-info');
   var body_overlay = document.getElementById('overlay');
   var pathArray = window.location.pathname.split( '/' );
 
@@ -10,6 +11,13 @@ window.onload = function() {
   for (var i = 0; i < main_menu_items.length; i++) {
     if (main_menu_items[i].getAttribute('href') == ('/' + pathArray[1])) {
       main_menu_items[i].classList.add('active');
+    }
+  }
+
+  // Removes Bootstrap's unnecessary form classes
+  for (var i = 0; i < info_btns.length; i++) {
+    if (info_btns[i].classList.contains('btn-info')) {
+      info_btns[i].classList.remove('btn-info');
     }
   }
 
