@@ -35,14 +35,10 @@ body {
   font-size: 14px;
   color: $color-accent-2;
   margin-right: 60px;
+  margin-top: 0px !important;
 
   p {
     line-height: 28px;
-  }
-
-  // Front page body has uneeded margin
-  &.path-frontpage {
-    margin-top: 0px;
   }
 
   // Body overlay when main navigation is toggled
@@ -54,6 +50,11 @@ body {
     width: 100%;
     z-index: 2;
     background: rgba(0,0,0,.50);
+  }
+
+  // Main body container
+  .main-container {
+    min-height: 69vh;
   }
 
   // Full width yellow strips of text
@@ -285,6 +286,151 @@ footer {
   }
 }
 
+// Announcements
+article.announcement {
+  position: relative;
+  padding: 30px 30px 50px 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px 0px $color-accent-2;
+
+  .field--type-timestamp {
+    font-family: $font-secondary;
+    font-weight: 300;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+  }
+}
+
+.view-announcements .announcement {
+  position: relative;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px 0px $color-accent-2;
+
+  &:hover {
+    box-shadow: 0px 1px 20px 0px $color-accent-2;
+
+    h1 {
+      color: $color-secondary;
+    }
+  }
+
+  &:focus-within h1 {
+    color: $color-secondary;
+  }
+
+  h1 {
+    margin: 0;
+    color: $color-main;
+
+    a {
+      color: $color-main;
+
+      &:hover {
+        text-decoration: none;
+        color: $color-secondary;
+      }
+
+      &:focus {
+        text-decoration: none;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  span {
+    font-family: $font-secondary;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-top: 18px;
+    margin-bottom: 0px;
+  }
+
+  a.announcement-anchor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// Forms and exposed filters
+input.form-control,
+select.form-control {
+  font-family: $font-secondary;
+  border: 1px solid #FFFFFF;
+  border-radius: 0px;
+  box-shadow: 0px 1px 4px 0px $color-accent-2;
+}
+
+select.form-control {
+  min-width: 100px;
+}
+
+label[for="edit-sort-by"] {
+  font-family: $font-secondary;
+  font-weight: 300;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+button[type="submit"] {
+  color: #FFFFFF;
+  background: $color-main;
+  border-radius: 0px;
+  border-color: $color-main;
+  box-shadow: 0px 1px 4px 0px $color-accent-2;
+
+  &:hover {
+    color: $color-secondary;
+    background: $color-main;
+    border-color: $color-main;
+  }
+
+  &:focus {
+    color: #FFFFFF;
+  }
+}
+
+.select-wrapper {
+  margin-right: 30px;
+
+  &::after {
+    color: $color-accent-2;
+  }
+}
+
+// Exposed filter pagination
+ul.pagination {
+  font-family: $font-secondary;
+
+  li:first-child > a, 
+  li:first-child > span,
+  li:last-child > a, 
+  li:last-child > span {
+    border-radius: 0px;
+  }
+
+  a {
+    color: $color-main;
+  }
+
+  .active a {
+    color: #FFFFFF;
+    background: $color-main;
+  }
+}
+
 // Media queries
 @media (max-width: 1060px) {
   .container {
@@ -313,5 +459,9 @@ footer {
       padding: 30px;
       background: $color-accent-2;
     }
+  }
+
+  label[for="edit-sort-by"] {
+    margin-left: 0px;
   }
 }
