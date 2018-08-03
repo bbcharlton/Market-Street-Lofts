@@ -19,6 +19,12 @@ body {
   color: #605F5E;
   margin-right: 60px;
   margin-top: 0px !important; }
+  body.toolbar-fixed.toolbar-horizontal aside.navigation {
+    padding-top: 39px; }
+  body.toolbar-fixed.toolbar-vertical aside.navigation {
+    padding-top: 39px; }
+  body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open aside.navigation {
+    padding-top: 79px; }
   body p {
     line-height: 28px; }
   body #overlay {

@@ -37,6 +37,18 @@ body {
   margin-right: 60px;
   margin-top: 0px !important;
 
+  &.toolbar-fixed.toolbar-horizontal aside.navigation, {
+    padding-top: 39px;
+  }
+
+  &.toolbar-fixed.toolbar-vertical aside.navigation, {
+    padding-top: 39px;
+  }
+
+  &.toolbar-fixed.toolbar-horizontal.toolbar-tray-open aside.navigation {
+    padding-top: 79px;
+  }
+
   p {
     line-height: 28px;
   }
