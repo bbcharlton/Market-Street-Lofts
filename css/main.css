@@ -265,6 +265,34 @@ article.event {
   float: left;
   margin-left: 15px; }
 
+.view-residence-directory .card {
+  position: relative;
+  padding: 18px 30px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px 0px #605F5E; }
+  .view-residence-directory .card p {
+    font-family: "Open Sans", sans-serif;
+    width: 25%;
+    float: left;
+    margin: 0; }
+
+.directory-heading {
+  position: relative;
+  padding: 0px 30px 18px 30px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border-bottom: solid 3px #043565; }
+  .directory-heading h3 {
+    font-family: "Open Sans", sans-serif;
+    width: 25%;
+    float: left;
+    margin: 0;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
 input.form-control,
 select.form-control {
   font-family: "Open Sans", sans-serif;
@@ -293,6 +321,10 @@ button[type="submit"] {
     border-color: #043565; }
   button[type="submit"]:focus {
     color: #FFFFFF; }
+
+.block-views-exposed-filter-blockresidence-directory-page-1 {
+  margin-top: 18px;
+  margin-bottom: 50px; }
 
 .select-wrapper {
   margin-right: 30px; }
