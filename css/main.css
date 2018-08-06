@@ -265,17 +265,19 @@ article.event {
   float: left;
   margin-left: 15px; }
 
-.view-residence-directory .card {
+.view-residents .card {
   position: relative;
   padding: 18px 30px;
   overflow: hidden;
   background: #FFFFFF;
   box-shadow: 0px 1px 4px 0px #605F5E; }
-  .view-residence-directory .card p {
+  .view-residents .card p {
     font-family: "Open Sans", sans-serif;
     width: 25%;
     float: left;
     margin: 0; }
+.view-residents .views-row:nth-of-type(even) .card {
+  background: #F5F5F5; }
 
 .directory-heading {
   position: relative;
@@ -322,7 +324,7 @@ button[type="submit"] {
   button[type="submit"]:focus {
     color: #FFFFFF; }
 
-.block-views-exposed-filter-blockresidence-directory-page-1 {
+.block-views-exposed-filter-blockresidents-page-1 {
   margin-top: 18px;
   margin-bottom: 50px; }
 
