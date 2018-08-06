@@ -401,6 +401,42 @@ article.event {
   }
 }
 
+// Residence cards
+.view-residence-directory .card {
+  position: relative;
+  padding: 18px 30px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px 0px $color-accent-2;
+
+  p {
+    font-family: $font-secondary;
+    width: 25%;
+    float: left;
+    margin: 0;
+  }
+}
+
+// Residence directory heading
+.directory-heading {
+  position: relative;
+  padding: 0px 30px 18px 30px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border-bottom: solid 3px $color-main;
+
+  h3 {
+    font-family: $font-secondary;
+    width: 25%;
+    float: left;
+    margin: 0;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
 // Forms and exposed filters
 input.form-control,
 select.form-control {
@@ -437,6 +473,12 @@ button[type="submit"] {
   &:focus {
     color: #FFFFFF;
   }
+}
+
+// Residence exposed filter
+.block-views-exposed-filter-blockresidence-directory-page-1 {
+  margin-top: 18px;
+  margin-bottom: 50px;
 }
 
 .select-wrapper {
