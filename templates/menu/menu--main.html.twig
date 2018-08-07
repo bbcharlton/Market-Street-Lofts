@@ -41,7 +41,17 @@
       %}
 
       {%
-        set icons = [
+        set icons_auth_false = [
+          'fa-home',
+          'fa-bullhorn',
+          'fa-calendar-alt',
+          'fa-envelope',
+          'fa-history'
+        ]
+      %}
+
+      {%
+        set icons_auth = [
           'fa-home',
           'fa-bullhorn',
           'fa-calendar-alt',
@@ -51,13 +61,17 @@
           'fa-history'
         ]
       %}
+
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
         <a href="{{ item.url }}" class="dropdown-toggle" data-target="#" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        {# {{ link(item.title, item.url) }} #}
-        <a href="{{ item.url }}" class="main-menu-item"><i class="fas {{ icons[loop.index0] }}"></i> <div class="main-menu-title">{{ item.title }}</div></a>
+        {% if loop.length == 7 %}
+          <a href="{{ item.url }}" class="main-menu-item"><i class="fas {{ icons_auth[loop.index0] }}"></i> <div class="main-menu-title">{{ item.title }}</div></a>
+        {% else %}
+          <a href="{{ item.url }}" class="main-menu-item"><i class="fas {{ icons_auth_false[loop.index0] }}"></i> <div class="main-menu-title">{{ item.title }}</div></a>
+        {% endif %}
       {% endif %}
       {% if item.below %}
         {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1) }}
