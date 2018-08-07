@@ -5,6 +5,8 @@ window.onload = function() {
   var info_btns = document.getElementsByClassName('btn-info');
   var body_overlay = document.getElementById('overlay');
   var pathArray = window.location.pathname.split( '/' );
+  var tax = document.getElementsByClassName('taxonomy-wrapper');
+  var tax_card = document.getElementsByClassName('taxonomy-card');
 
   // Sets the active class for the main menu since Drupal's way
   // of doing so seems to be broken
@@ -19,6 +21,30 @@ window.onload = function() {
     if (info_btns[i].classList.contains('btn-info')) {
       info_btns[i].classList.remove('btn-info');
     }
+  }
+
+  // Links the resource taxonomy to the resource collapse list
+  for (var i = 0; i < tax.length; i++) {
+    var title = tax[i].firstElementChild;
+    var list = title.nextElementSibling;
+    var data_target = title.firstElementChild.getAttribute('data-target').replace(/\./g,'');
+    list.classList.add(data_target);
+  }
+
+  for (var i = 0; i < tax_card.length; i++) {
+    (function() {
+      var anchor = tax_card[i];
+
+      anchor.addEventListener('click', function() {
+        if (anchor.classList.contains('collapsed')) {
+          anchor.firstElementChild.classList.remove('fa-chevron-right');
+          anchor.firstElementChild.classList.add('fa-chevron-down');
+        } else {
+          anchor.firstElementChild.classList.remove('fa-chevron-down');
+          anchor.firstElementChild.classList.add('fa-chevron-right');
+        }
+      });
+    }());
   }
 
   // Toggles the main navigation
