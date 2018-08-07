@@ -27,6 +27,13 @@ h2 {
 h3 {
   font-family: $font-secondary;
   font-size: 24px;
+
+  &.full-title {
+    padding: 18px;
+    margin: 0px 0px 18px 0px;
+    color: #FFFFFF;
+    background: $color-secondary;
+  }
 }
 
 // Body content
@@ -526,6 +533,72 @@ article.event {
   }
 }
 
+// Contacts and Board Members profiles
+.block-views-blockboard-members-block-1 {
+  text-align: center;
+
+  .view-content {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .view-header {
+    text-align: left;
+  }
+}
+
+// Each individual board member
+.board-member {
+  display: inline-block;
+  flex: 1;
+  margin: 15px;
+  text-align: center;
+
+  .views-field-field-board-member-status {
+    font-weight: bold;
+  }
+
+  .views-field-name {
+    font-family: $font-secondary;
+    font-weight: 300;
+  }
+}
+
+// Board member profile picture
+.img-responsive {
+  border-radius: 50%;
+
+  img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+// Meetings view
+.block-views-blockmeetings-block-1 {
+  .views-view-grid {
+    text-align: center;
+    box-shadow: 0px 1px 4px 0px $color-accent-2;
+    margin-bottom: 18px;
+  }
+
+  .views-col {
+    padding: 10px;
+    // border: 1px solid $color-accent-2;
+    box-shadow: 0px 1px 1px 0px $color-accent-2;
+  }
+
+  .view-footer {
+    margin-top: 18px;
+    margin-bottom: 50px;
+  }
+
+  p:nth-of-type(2) {
+    margin-bottom: 18px;
+  }
+}
+
 // Forms and exposed filters
 input.form-control,
 select.form-control {
@@ -644,6 +717,18 @@ ul.pagination {
       padding: 30px;
       background: $color-accent-2;
     }
+  }
+
+  .block-views-blockboard-members-block-1 .view-content {
+    display: inline-block;
+  }
+
+  .board-member {
+    width: 100%;
+  }
+
+  .block-views-blockmeetings-block-1 .views-col {
+    width: 50% !important;
   }
 
   label[for="edit-sort-by"] {
