@@ -12,6 +12,11 @@ h2 {
 h3 {
   font-family: "Open Sans", sans-serif;
   font-size: 24px; }
+  h3.full-title {
+    padding: 18px;
+    margin: 0px 0px 18px 0px;
+    color: #FFFFFF;
+    background: #F6AE2D; }
 
 body {
   font-family: "Merriweather", serif;
@@ -342,6 +347,45 @@ article.event {
         text-decoration: none;
         color: #F6AE2D; }
 
+.block-views-blockboard-members-block-1 {
+  text-align: center; }
+  .block-views-blockboard-members-block-1 .view-content {
+    display: flex;
+    margin-bottom: 50px; }
+  .block-views-blockboard-members-block-1 .view-header {
+    text-align: left; }
+
+.board-member {
+  display: inline-block;
+  flex: 1;
+  margin: 15px;
+  text-align: center; }
+  .board-member .views-field-field-board-member-status {
+    font-weight: bold; }
+  .board-member .views-field-name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
+
+.img-responsive {
+  border-radius: 50%; }
+  .img-responsive img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto; }
+
+.block-views-blockmeetings-block-1 .views-view-grid {
+  text-align: center;
+  box-shadow: 0px 1px 4px 0px #605F5E;
+  margin-bottom: 18px; }
+.block-views-blockmeetings-block-1 .views-col {
+  padding: 10px;
+  box-shadow: 0px 1px 1px 0px #605F5E; }
+.block-views-blockmeetings-block-1 .view-footer {
+  margin-top: 18px;
+  margin-bottom: 50px; }
+.block-views-blockmeetings-block-1 p:nth-of-type(2) {
+  margin-bottom: 18px; }
+
 input.form-control,
 select.form-control {
   font-family: "Open Sans", sans-serif;
@@ -421,6 +465,15 @@ ul.pagination {
       flex: 0;
       padding: 30px;
       background: #605F5E; }
+
+  .block-views-blockboard-members-block-1 .view-content {
+    display: inline-block; }
+
+  .board-member {
+    width: 100%; }
+
+  .block-views-blockmeetings-block-1 .views-col {
+    width: 50% !important; }
 
   label[for="edit-sort-by"] {
     margin-left: 0px; } }
