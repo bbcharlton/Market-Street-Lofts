@@ -444,6 +444,88 @@ article.event {
   }
 }
 
+// Resources
+.view-resources {
+  .view-header {
+    margin-bottom: 18px;
+  }
+
+  .taxonomy-wrapper {
+    h3 {
+      font-family: $font-main;
+      background: $color-accent-1;
+      margin: 0px 0px 30px 0px;
+      box-shadow: 0px 1px 4px 0px $color-accent-2;
+  
+      a {
+        display: block;
+        padding: 30px;
+        color: #FFFFFF;
+        text-decoration: none;
+        
+        &:hover {
+          color: #FFFFFF;
+          text-decoration: none;
+          cursor: pointer;
+        }
+  
+        .svg-inline--fa {
+          width: 24px;
+          margin-right: 15px;
+        }
+      }
+    }
+  
+    // List of files
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin-top: -30px;
+      margin-bottom: 30px;
+  
+      li:nth-of-type(even) {
+        background: #F5F5F5;
+      }
+  
+      .file {
+        margin: 0px;
+  
+        &>span {
+          background: transparent;
+          border-top: none;
+        }
+  
+        .file-icon {
+          padding: 15px 15px 15px 30px;
+  
+          &>span {
+            color: $color-main;
+          }
+        }
+  
+        .file-link {
+          border-top: none;
+  
+          &>span {
+            color: $color-main;
+          }
+        }
+  
+        .file-link a {
+          display: block;
+          color: $color-main;
+          padding: 15px 15px 15px 0;
+  
+          &:hover {
+            text-decoration: none;
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Forms and exposed filters
 input.form-control,
 select.form-control {

@@ -295,6 +295,53 @@ article.event {
     white-space: nowrap;
     overflow: hidden; }
 
+.view-resources .view-header {
+  margin-bottom: 18px; }
+.view-resources .taxonomy-wrapper h3 {
+  font-family: "Merriweather", serif;
+  background: #D56062;
+  margin: 0px 0px 30px 0px;
+  box-shadow: 0px 1px 4px 0px #605F5E; }
+  .view-resources .taxonomy-wrapper h3 a {
+    display: block;
+    padding: 30px;
+    color: #FFFFFF;
+    text-decoration: none; }
+    .view-resources .taxonomy-wrapper h3 a:hover {
+      color: #FFFFFF;
+      text-decoration: none;
+      cursor: pointer; }
+    .view-resources .taxonomy-wrapper h3 a .svg-inline--fa {
+      width: 24px;
+      margin-right: 15px; }
+.view-resources .taxonomy-wrapper ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: -30px;
+  margin-bottom: 30px; }
+  .view-resources .taxonomy-wrapper ul li:nth-of-type(even) {
+    background: #F5F5F5; }
+  .view-resources .taxonomy-wrapper ul .file {
+    margin: 0px; }
+    .view-resources .taxonomy-wrapper ul .file > span {
+      background: transparent;
+      border-top: none; }
+    .view-resources .taxonomy-wrapper ul .file .file-icon {
+      padding: 15px 15px 15px 30px; }
+      .view-resources .taxonomy-wrapper ul .file .file-icon > span {
+        color: #043565; }
+    .view-resources .taxonomy-wrapper ul .file .file-link {
+      border-top: none; }
+      .view-resources .taxonomy-wrapper ul .file .file-link > span {
+        color: #043565; }
+    .view-resources .taxonomy-wrapper ul .file .file-link a {
+      display: block;
+      color: #043565;
+      padding: 15px 15px 15px 0; }
+      .view-resources .taxonomy-wrapper ul .file .file-link a:hover {
+        text-decoration: none;
+        color: #F6AE2D; }
+
 input.form-control,
 select.form-control {
   font-family: "Open Sans", sans-serif;
