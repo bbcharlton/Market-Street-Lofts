@@ -60,6 +60,11 @@ body {
     padding-top: 39px;
   }
 
+  blockquote p {
+    font-family: $font-secondary;
+    font-weight: 300;
+  }
+
   p {
     line-height: 28px;
   }
@@ -95,6 +100,17 @@ body {
       text-align: center;
       margin-top: 50px;
       margin-bottom: 0px;
+    }
+
+    &-full {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-top: 40px;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      text-align: center;
     }
   }
 
@@ -163,7 +179,6 @@ aside.navigation {
 
     &.active {
       color: $color-secondary;
-      pointer-events: none;
     }
 
     &:hover {
@@ -599,6 +614,73 @@ article.event {
   }
 }
 
+// History and History single pages
+.block-views-blockhistory-block-1 {
+  margin-bottom: 50px;
+
+  .history {
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 4px 0px $color-accent-2;
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    a {
+      display: block;
+      padding: 125px 0px;
+      color: #FFFFFF;
+      background: rgba(0,0,0,.50);
+  
+      &:hover {
+        color: $color-secondary;
+        text-decoration: none;
+        box-shadow: 0px 1px 20px 0px $color-accent-2;
+      }
+  
+      &:focus {
+        color: $color-secondary;
+        text-decoration: none;
+        box-shadow: 0px 1px 20px 0px $color-accent-2;
+      }
+    }
+  }
+}
+
+.history-page .img-responsive {
+  border-radius: 0;
+  margin: 50px auto;
+  height: 400px;
+  width: auto;
+}
+
+// History quote
+.quote-wrapper {
+  text-align: center;
+  display: inline-block;
+
+  .quote-text {
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .quote-author {
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 // Forms and exposed filters
 input.form-control,
 select.form-control {
@@ -729,6 +811,11 @@ ul.pagination {
 
   .block-views-blockmeetings-block-1 .views-col {
     width: 50% !important;
+  }
+
+  .history-page .img-responsive {
+    width: 100%;
+    height: auto;
   }
 
   label[for="edit-sort-by"] {

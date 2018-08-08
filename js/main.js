@@ -7,6 +7,7 @@ window.onload = function() {
   var pathArray = window.location.pathname.split( '/' );
   var tax = document.getElementsByClassName('taxonomy-wrapper');
   var tax_card = document.getElementsByClassName('taxonomy-card');
+  var history_imgs = document.getElementsByClassName('history');
 
   // Sets the active class for the main menu since Drupal's way
   // of doing so seems to be broken
@@ -31,6 +32,7 @@ window.onload = function() {
     list.classList.add(data_target);
   }
 
+  // Toggles dropdown icon for Resource categories
   for (var i = 0; i < tax_card.length; i++) {
     (function() {
       var anchor = tax_card[i];
@@ -45,6 +47,11 @@ window.onload = function() {
         }
       });
     }());
+  }
+
+  // Applies background images for the history view
+  for (var i = 0; i < history_imgs.length; i++) {
+    history_imgs[i].style.backgroundImage = "url('" + history_imgs[i].getAttribute('data-bg') + "')";
   }
 
   // Toggles the main navigation
