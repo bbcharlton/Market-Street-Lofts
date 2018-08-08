@@ -32,6 +32,9 @@ body {
     padding-top: 79px; }
   body.toolbar-vertical aside.navigation {
     padding-top: 39px; }
+  body blockquote p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
   body p {
     line-height: 28px; }
   body #overlay {
@@ -57,6 +60,15 @@ body {
       text-align: center;
       margin-top: 50px;
       margin-bottom: 0px; }
+    body .text-strip-full {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-top: 40px;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      text-align: center; }
   body .front-page-panel-wrapper {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -104,8 +116,7 @@ aside.navigation {
     padding: 15px;
     white-space: nowrap; }
     aside.navigation a.active {
-      color: #F6AE2D;
-      pointer-events: none; }
+      color: #F6AE2D; }
     aside.navigation a:hover {
       color: #F6AE2D;
       background: transparent; }
@@ -386,6 +397,54 @@ article.event {
 .block-views-blockmeetings-block-1 p:nth-of-type(2) {
   margin-bottom: 18px; }
 
+.block-views-blockhistory-block-1 {
+  margin-bottom: 50px; }
+  .block-views-blockhistory-block-1 .history {
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 4px 0px #605F5E; }
+    .block-views-blockhistory-block-1 .history h1 {
+      font-size: 24px; }
+    .block-views-blockhistory-block-1 .history a {
+      display: block;
+      padding: 125px 0px;
+      color: #FFFFFF;
+      background: rgba(0, 0, 0, 0.5); }
+      .block-views-blockhistory-block-1 .history a:hover {
+        color: #F6AE2D;
+        text-decoration: none;
+        box-shadow: 0px 1px 20px 0px #605F5E; }
+      .block-views-blockhistory-block-1 .history a:focus {
+        color: #F6AE2D;
+        text-decoration: none;
+        box-shadow: 0px 1px 20px 0px #605F5E; }
+
+.history-page .img-responsive {
+  border-radius: 0;
+  margin: 50px auto;
+  height: 400px;
+  width: auto; }
+
+.quote-wrapper {
+  text-align: center;
+  display: inline-block; }
+  .quote-wrapper .quote-text {
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px; }
+  .quote-wrapper .quote-author {
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px; }
+
 input.form-control,
 select.form-control {
   font-family: "Open Sans", sans-serif;
@@ -474,6 +533,10 @@ ul.pagination {
 
   .block-views-blockmeetings-block-1 .views-col {
     width: 50% !important; }
+
+  .history-page .img-responsive {
+    width: 100%;
+    height: auto; }
 
   label[for="edit-sort-by"] {
     margin-left: 0px; } }
